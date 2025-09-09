@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  python:
+    build: .
+    volumes:
+      - ./src:/home/jovyan/work
+
+  jupyter:
+    build: .
+    ports:
+      - "8889:8888"
+    extra_hosts:
+      - "algoTrading:127.0.0.1"
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+    command: start-notebook.sh --NotebookApp.token='' --allow-root
+networks:
+  default:
+    driver: bridge
