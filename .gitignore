@@ -28,8 +28,8 @@ Thumbs.db
 
 # ---- Docker ----
 # ignore local volumes (if you use them)
-data/
+data/raw/.ipynb_checkpoints
 volumes/
-
+notebooks/*
 # ---- IDE ----
 .idea

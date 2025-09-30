@@ -5,6 +5,8 @@ services:
     build: .
     volumes:
       - ./src:/home/jovyan/work
+      - ./scripts:/home/jovyan/work/scripts
+      - ./outputs:/home/jovyan/work/outputs
 
   jupyter:
     build: .
@@ -14,6 +16,7 @@ services:
       - "algoTrading:127.0.0.1"
     volumes:
       - ./notebooks:/home/jovyan/work/notebooks
+      - ./data:/home/jovyan/work/data
     command: start-notebook.sh --NotebookApp.token='' --allow-root
 networks:
   default:
