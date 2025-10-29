@@ -1,3 +1,13 @@
+#Core scientific stack
 numpy
 pandas
+#Backtesting
+vectorbt
+#Visualization
 matplotlib
+#Data acquisition
+yfinance
+ccxt
+python-binance
+#Technical indicators
+ta
